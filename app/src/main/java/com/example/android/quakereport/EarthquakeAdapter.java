@@ -1,6 +1,5 @@
 package com.example.android.quakereport;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,13 +25,13 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
         Earthquake currentEarthquake = getItem(position);
 
-        TextView magTextView = (TextView) listItemView.findViewById(R.id.earthquake_magnitude);
+        TextView magTextView = (TextView) listItemView.findViewById(R.id.magnitude);
         magTextView.setText(currentEarthquake.getMagnitude());
 
-        TextView locTextView = (TextView) listItemView.findViewById(R.id.earthquake_city);
+        TextView locTextView = (TextView) listItemView.findViewById(R.id.location);
         locTextView.setText(currentEarthquake.getLocation());
 
-        TextView dateTextView = (TextView) listItemView.findViewById(R.id.earthquake_date);
+        TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
         dateTextView.setText(currentEarthquake.getDate());
 
         return listItemView;
