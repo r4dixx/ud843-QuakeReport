@@ -15,4 +15,5 @@
 -->
 <resources>
     <string name="app_name">Quake Report</string>
+    <string name="default_location_text">Near the</string>
 </resources>
