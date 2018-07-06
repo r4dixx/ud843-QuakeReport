@@ -4,12 +4,12 @@ public class Earthquake {
 
     private String mMagnitude;
     private String mLocation;
-    private String mDate;
+    private long mUnixTime;
 
-    public Earthquake(String magnitude, String location, String date) {
+    public Earthquake(String magnitude, String location, long unixTime) {
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mUnixTime = unixTime;
     }
 
     public String getMagnitude() {
@@ -20,8 +20,8 @@ public class Earthquake {
         return mLocation;
     }
 
-    public String getDate() {
-        return mDate;
+    public long getUnixTime() {
+        return mUnixTime;
     }
 
 }
