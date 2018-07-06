@@ -58,7 +58,9 @@ public final class QueryUtils {
 
                 long unixTime = properties.getLong("time");
 
-                Earthquake earthquake = new Earthquake(magnitude, location, unixTime);
+                String url = properties.getString("url");
+
+                Earthquake earthquake = new Earthquake(magnitude, location, unixTime, url);
                 earthquakes.add(earthquake);
             }
 
