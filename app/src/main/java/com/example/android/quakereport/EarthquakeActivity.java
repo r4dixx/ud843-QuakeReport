@@ -139,6 +139,11 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
                 getString(R.string.settings_min_magnitude_key),
                 getString(R.string.settings_min_magnitude_default));
 
+        String orderBy = sharedPrefs.getString(
+                getString(R.string.settings_order_by_key),
+                getString(R.string.settings_order_by_default)
+        );
+
         // parse breaks apart the URI string that's passed into its parameter
         Uri baseUri = Uri.parse(USGS_REQUEST_URL);
 
@@ -147,7 +152,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 
         // Append query parameter and its value. For example, the `format=geojson`
         uriBuilder.appendQueryParameter("format", "geojson");
-        uriBuilder.appendQueryParameter("orderby", "time");
+        uriBuilder.appendQueryParameter("orderby", orderBy);
         uriBuilder.appendQueryParameter("minmag", minMagnitude);
         uriBuilder.appendQueryParameter("limit", "10");
 
